@@ -1,0 +1,78 @@
+Question :- Print The Bank Details such as,Bank name ,Account Number,Account holder name, etc using Adapter Design Pattern
+
+
+public interface CreditCard {  
+    public void giveBankDetails();  
+    public String getCreditCard();  
+}
+
+public class BankDetails{  
+    private String bankName;  
+    private String accHolderName;  
+    private long accNumber;  
+      
+    public String getBankName() {  
+        return bankName;  
+    }  
+    public void setBankName(String bankName) {  
+        this.bankName = bankName;  
+    }  
+    public String getAccHolderName() {  
+        return accHolderName;  
+    }  
+    public void setAccHolderName(String accHolderName) {  
+        this.accHolderName = accHolderName;  
+    }  
+    public long getAccNumber() {  
+        return accNumber;  
+    }  
+    public void setAccNumber(long accNumber) {  
+        this.accNumber = accNumber;  
+    }  
+}
+
+public class BankDetails{  
+    private String bankName;  
+    private String accHolderName;  
+    private long accNumber;  
+      
+    public String getBankName() {  
+        return bankName;  
+    }  
+    public void setBankName(String bankName) {  
+        this.bankName = bankName;  
+    }  
+    public String getAccHolderName() {  
+        return accHolderName;  
+    }  
+    public void setAccHolderName(String accHolderName) {  
+        this.accHolderName = accHolderName;  
+    }  
+    public long getAccNumber() {  
+        return accNumber;  
+    }  
+    public void setAccNumber(long accNumber) {  
+        this.accNumber = accNumber;  
+    }  
+}
+
+
+public class AdapterPatternDemo {  
+ public static void main(String args[]){  
+  CreditCard targetInterface=new BankCustomer();  
+  targetInterface.giveBankDetails();  
+  System.out.print(targetInterface.getCreditCard());  
+ }   
+}
+
+
+OUTPUT:-
+ 
+Enter the account holder name :Harshal Gajbhiye 
+  
+Enter the account number:10001  
+  
+Enter the bank name :State Bank of India  
+  
+The Account number 10001 of Harshal Gajbhiye in State Bank of India bank is valid   
+and authenticated for issuing the credit card.  
